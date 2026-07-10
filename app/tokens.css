@@ -1,0 +1,72 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-void-700: #1B1815;
+  --primitive-color-void-800: #131110;
+  --primitive-color-void-900: #0B0A08;
+  --primitive-color-void-950: #080706;
+  --primitive-color-line-500: #2C2820;
+  --primitive-color-line-700: #211E18;
+  --primitive-color-ivory-100: #F3EEE2;
+  --primitive-color-ivory-300: #EAE3D3;
+  --primitive-color-ivory-500: #8F8676;
+  --primitive-color-bronze-300: #E0BD7E;
+  --primitive-color-bronze-500: #C6A15B;
+  --primitive-color-bronze-700: #8A6B36;
+  --primitive-color-bronze-900: #3E3018;
+  --primitive-font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --primitive-font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+  --primitive-font-mono: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  --primitive-motion-duration-micro: 220ms;
+  --primitive-motion-duration-base: 500ms;
+  --primitive-motion-duration-reveal: 1.3s;
+  --primitive-motion-duration-processional: 2.2s;
+  --primitive-motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --primitive-motion-ease-hush: cubic-bezier(0.22, 1, 0.36, 1);
+  --primitive-tracking-display: 0.01em;
+  --primitive-tracking-label: 0.32em;
+}
+
+/* === SEMANTIC === */
+:root {
+  --background: #0B0A08;
+  --foreground: #EAE3D3;
+  --card: #131110;
+  --card-foreground: #EAE3D3;
+  --muted: #131110;
+  --muted-foreground: #8F8676;
+  --accent: #C6A15B;
+  --accent-foreground: #0B0A08;
+  --border: #2C2820;
+  --ring: #C6A15B;
+  --radius: 0rem;
+  --bronze: #C6A15B;
+  --bronze-bright: #E0BD7E;
+  --bronze-dim: #3E3018;
+  --surface-line: #2C2820;
+  --void-deep: #080706;
+  --type-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --type-body: var(--font-inter), Inter, system-ui, sans-serif;
+  --type-label: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-hush: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-micro: 220ms;
+  --duration-base: 500ms;
+  --duration-reveal: 1.3s;
+  --tracking-display: 0.01em;
+  --tracking-label: 0.32em;
+}
+
+/* === COMPONENTS === */
+:root {
+  --hero-title-size: clamp(2.4rem, 6vw, 4.6rem);
+  --hero-title-leading: 1.08;
+  --hero-vignette: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(198, 161, 91, 0.07), transparent 65%);
+  --label-accession-color: #C6A15B;
+  --label-spacing: clamp(2.5rem, 6vw, 5rem);
+  --button-ghost-border: #8A6B36;
+  --button-ghost-hover-border: #C6A15B;
+  --button-ghost-fg: #E0BD7E;
+}

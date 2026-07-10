@@ -1,26 +1,79 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tw-animate-css";
+@import "./tokens.css";
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--type-body);
+  --font-display: var(--type-display);
+  --font-label: var(--type-label);
+  --color-ring: var(--ring);
+  --color-border: var(--border);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-bronze: var(--bronze);
+  --color-bronze-bright: var(--bronze-bright);
+  --color-bronze-dim: var(--bronze-dim);
+  --ease-reveal: var(--ease-reveal);
+  --ease-hush: var(--ease-hush);
+  --radius-none: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    background: var(--bronze);
+    color: var(--background);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-display {
+    font-family: var(--type-display);
+  }
+  .font-label {
+    font-family: var(--type-label);
+  }
+  .text-accession {
+    font-family: var(--type-label);
+    font-size: 0.68rem;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--bronze);
+  }
+  .text-meta {
+    font-family: var(--type-label);
+    font-size: 0.68rem;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+  .hairline {
+    border-color: var(--surface-line);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
